@@ -503,13 +503,13 @@
         <h2 class="section-title">Get In Touch</h2>
         <form action="https://formsubmit.co/kauffmanayden@gmail.com" method="POST" class="contact-form">
             <div class="form-group">
-                <input type="text" placeholder="Your Name" required>
+                <input type="text" name="name" placeholder="Your Name" required>
             </div>
             <div class="form-group">
                 <input type="email" name="email" placeholder="Your Email" required>
             </div>
             <div class="form-group">
-                <textarea rows="6" placeholder="Your Message" required></textarea>
+                <textarea rows="6" name="message" placeholder="Your Message" required></textarea>
             </div>
             <div class="form-group">
                 <button type="submit" class="cta-button">Send Message</button>
@@ -592,14 +592,6 @@
         }
 
         // Form submission
-        function setupForm() {
-            const form = document.querySelector('.contact-form');
-            form.addEventListener('submit', (e) => {
-                e.preventDefault();
-                alert('Thanks for your message! I\'ll get back to you soon.');
-                form.reset();
-            });
-        }
 
         // Initialize everything when DOM is loaded
         document.addEventListener('DOMContentLoaded', () => {
